@@ -6,15 +6,16 @@ const connectionString =
     ? process.env.DATABASE_URL_TEST || process.env.DATABASE_URL
     : process.env.DATABASE_URL;
 
+console.log('DB DEBUG - NODE_ENV=', process.env.NODE_ENV || 'not-set');
+console.log('DB DEBUG - DATABASE_URL present=', !!connectionString);
+
 if (!connectionString) {
-  console.error('FATAL: DATABASE_URL is not set. Set it in your environment (Render/Neon).');
-  // throw an explicit error so logs show reason
+  console.error('FATAL: DATABASE_URL is not set. Set it in your environment (Render/Neon/Railway).');
   throw new Error('DATABASE_URL env var is required');
 }
 
-// Enable SSL for production hosts (Neon). You can also set PGSSLMODE or an env var.
 const pool = new Pool({
-   connectionString: process.env.DATABASE_URL,
+  connectionString,
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
 });
 
