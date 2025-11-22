@@ -7,7 +7,7 @@ A small URL shortening service (TinyLink) built with Node.js + Express and Postg
 ---
 
 ## Live demo (public URL)
-> Add your deployed URL here (example: `https://your-app.onrender.com`)
+> https://tinylink-5qak.onrender.com
 
 ---
 
