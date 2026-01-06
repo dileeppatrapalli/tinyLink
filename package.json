@@ -6,6 +6,8 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "migrate": "psql \"$DATABASE_URL\" -f migrations/001_create_links.sql",
+    "migrate:node": "node scripts/migrate.js",
+    "release": "npm run migrate:node",
     "seed": "psql \"$DATABASE_URL\" -f seeds/seed_links.sql",
     "test": "jest --runInBand"
   },
