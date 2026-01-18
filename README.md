@@ -7,12 +7,18 @@ A small URL shortening service (TinyLink) built with Node.js + Express and Postg
 ---
 
 ## Live demo (public URL)
-> Add your deployed URL here (example: `https://your-app.onrender.com`)
+> https://tinylink-5qak.onrender.com
+
+---
+
+## Demo Video
+Watch the full TinyLink walkthrough here:  
+>https://drive.google.com/file/d/1rWoICJLMFkkGUo8hDJyFlRMIGZnxov3c/view?usp=drivesdk
 
 ---
 
 ## GitHub repo
-> Add your public GitHub repo link here
+> https://github.com/Dileep8221/tinyLink
 
 ---
 
